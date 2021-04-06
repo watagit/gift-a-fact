@@ -10,7 +10,7 @@ const Item: FC<Props> = ({ img }) => {
   return (
     <>
       <div>
-        <Image src={img} height={80} width={80} />
+        <Image src={`/img/${img}`} height={80} width={80} />
       </div>
       <Button label={"選択"} onClick={null} />
     </>
