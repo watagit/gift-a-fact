@@ -1,14 +1,22 @@
 import { FC } from 'react';
-import TextField from '../components/TextField';
-import TextArea from '../components/TextArea';
+import Item from '../components/Item';
 
-const Index: FC = () => {
+const items = [
+  "bouquet_birthday.png",
+  "game_ken_seiken.png",
+  "pet_cat_sit.png",
+  "sushi_kai_hokkigai.png",
+  "sweets_cake_rousoku.png"
+];
+
+const TopPage: FC = () => {
   return (
     <>
-      <TextField label={"label"} placeholder={"placeholder"} />
-      <TextArea label={"label"} placeholder={"placeholder"} />
+      {items.map((item, i) => (
+        <Item key={i} img={item} />
+      ))}
     </>
   );
 };
 
-export default Index;
+export default TopPage;
