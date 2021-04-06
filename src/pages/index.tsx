@@ -1,7 +1,10 @@
 import { FC } from 'react';
+import TextField from '../components/TextField';
 
 const Index: FC = () => {
-  return <>Index</>;
+  return (
+    <TextField label={"label"} placeholder={"placeholder"} />
+  );
 };
 
 export default Index;
