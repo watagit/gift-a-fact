@@ -5,13 +5,13 @@ export interface Props {
   placeholder: string;
 }
 
-const TextField: FC<Props> = ({ label, placeholder }) => {
+const TextArea: FC<Props> = ({ label, placeholder }) => {
   return (
     <>
       <div>{label}</div>
-      <input placeholder={placeholder} />
+      <textarea placeholder={placeholder} />
     </>
   );
 };
 
-export default TextField;
+export default TextArea;
