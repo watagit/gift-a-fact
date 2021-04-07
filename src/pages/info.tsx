@@ -1,9 +1,11 @@
 import { FC, useCallback, useState, ChangeEvent } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+
 import TextField from '../components/TextField';
 import TextArea from '../components/TextArea';
 import Button from '../components/Button';
+import { db } from '../../firebase/firebase';
 
 const InfoPage: FC = () => {
   const router = useRouter();
@@ -26,6 +28,15 @@ const InfoPage: FC = () => {
 
   const handleSubmit = () => {
     console.log(presentName, nickName, message);
+    db.collection('presents').add({
+      presentName: presentName,
+      nickName: nickName,
+      message: message
+    }).then(() => {
+      console.log('saved');
+    }).catch(() => {
+      console.log('error');
+    });
   }
 
   return (
