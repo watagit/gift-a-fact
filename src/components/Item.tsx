@@ -15,7 +15,7 @@ const Item: FC<Props> = ({ img }) => {
     router.push({
       pathname: '/info',
       query: { img: img },
-    });
+    }).then();
   }
 
   return (
