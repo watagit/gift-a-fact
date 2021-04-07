@@ -27,15 +27,12 @@ const InfoPage: FC = () => {
   }, [setMessage]);
 
   const handleSubmit = () => {
-    console.log(presentName, nickName, message);
     db.collection('presents').add({
       presentName: presentName,
       nickName: nickName,
       message: message
     }).then(() => {
-      console.log('saved');
-    }).catch(() => {
-      console.log('error');
+      router.push('/result').then();
     });
   }
 
