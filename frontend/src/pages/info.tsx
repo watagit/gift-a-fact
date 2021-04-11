@@ -38,6 +38,7 @@ const InfoPage: FC = () => {
 
   return (
     <>
+      <h1>InfoPage</h1>
       <Image src={`/img/${router.query.img}`} height={80} width={80} />
       <TextField label={"プレゼント名"} placeholder={"とびっきりのプレゼント"} onChange={inputPresentName} />
       <TextField label={"ニックネーム"} placeholder={"名無しの権兵衛"} onChange={inputNickName} />

@@ -12,9 +12,12 @@ const items = [
 const TopPage: FC = () => {
   return (
     <>
-      {items.map((item, i) => (
-        <Item key={i} img={item} />
-      ))}
+      <h1>TopPage</h1>
+      <div>
+        {items.map((item, i) => (
+          <Item key={i} img={item} />
+        ))}
+      </div>
     </>
   );
 };
